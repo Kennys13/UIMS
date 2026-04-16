@@ -2,5 +2,5 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "corepack pnpm install --store-dir .pnpm-store",
   "buildCommand": "corepack pnpm --filter @lotusvalley/web build",
-  "outputDirectory": "apps/web/out"
+  "outputDirectory": "out"
 }
