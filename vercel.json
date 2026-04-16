@@ -1,10 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
   "installCommand": "corepack pnpm install --store-dir .pnpm-store",
-  "experimentalServices": {
-    "web": {
-      "entrypoint": "apps/web",
-      "routePrefix": "/"
-    }
-  }
+  "buildCommand": "corepack pnpm --filter @lotusvalley/web build"
 }
