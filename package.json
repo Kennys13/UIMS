@@ -1,0 +1,16 @@
+{
+  "name": "lotus-valley-school-platform",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.4.1",
+  "scripts": {
+    "dev": "corepack pnpm -r --parallel --filter @lotusvalley/web --filter @lotusvalley/api dev",
+    "build": "corepack pnpm -r --filter @lotusvalley/web --filter @lotusvalley/api build",
+    "lint": "corepack pnpm -r --if-present --filter @lotusvalley/web --filter @lotusvalley/api lint",
+    "typecheck": "corepack pnpm -r --filter @lotusvalley/web --filter @lotusvalley/api typecheck"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.3"
+  }
+}
