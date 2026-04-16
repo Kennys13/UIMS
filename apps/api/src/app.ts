@@ -1,7 +1,7 @@
 import cors from "cors";
 import express from "express";
-import rateLimit from "express-rate-limit";
-import helmet from "helmet";
+import rateLimitImport from "express-rate-limit";
+import helmetImport from "helmet";
 import { env } from "./config/env.js";
 import { errorHandler, notFoundHandler } from "./middleware/error-handler.js";
 import { analyticsRouter } from "./routes/analytics.routes.js";
@@ -14,6 +14,11 @@ import { leavesRouter } from "./routes/leaves.routes.js";
 import { profileRouter } from "./routes/profile.routes.js";
 import { resultsRouter } from "./routes/results.routes.js";
 import { usersRouter } from "./routes/users.routes.js";
+
+const helmet = ("default" in helmetImport ? helmetImport.default : helmetImport) as typeof import("helmet").default;
+const rateLimit = ("default" in rateLimitImport
+  ? rateLimitImport.default
+  : rateLimitImport) as typeof import("express-rate-limit").default;
 
 export function createApp() {
   const app = express();
