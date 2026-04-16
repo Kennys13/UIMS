@@ -15,6 +15,10 @@ const DEMO_EMAILS: Record<Role, string> = {
   admin: "admin@lotusvalley.test"
 };
 
+export function generateStaticParams() {
+  return Object.keys(DEMO_EMAILS).map((role) => ({ role }));
+}
+
 export default function ProfilePage({ params }: { params: { role: Role } }) {
   const [state, setState] = useState<{ token: string; user: User } | null>(null);
 

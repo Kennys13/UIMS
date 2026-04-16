@@ -15,6 +15,10 @@ const DEMO_EMAILS: Record<Role, string> = {
   admin: "admin@lotusvalley.test"
 };
 
+export function generateStaticParams() {
+  return Object.keys(DEMO_EMAILS).map((role) => ({ role }));
+}
+
 export default function PortalPage({ params }: { params: { role: Role } }) {
   const [state, setState] = useState<{ session: Session; payload: DashboardPayload } | null>(null);
   const [error, setError] = useState("");
