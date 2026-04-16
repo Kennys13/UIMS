@@ -5,6 +5,7 @@ coverage
 .turbo
 .DS_Store
 *.log
+*.tsbuildinfo
 .env
 .env.local
 .pnpm-store

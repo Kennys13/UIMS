@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Lotus Valley School
 
 Production-style school ERP with role-based portals for students, teachers, admissions, HR, and admins.
@@ -147,11 +146,19 @@ Notes:
 ## Verification
 
 - Workspace typecheck passes with `corepack pnpm typecheck`
+- Production builds pass with:
+  `corepack pnpm --filter @lotusvalley/web build`
+  `corepack pnpm --filter @lotusvalley/api build`
 
 ## Notes
 
 - The app currently uses rich seeded dummy data so it works end-to-end immediately.
 - Mongoose models are included and the environment is prepared for connecting to a real MongoDB database as the next step.
-=======
-# UIMS
->>>>>>> 5d23db54c111df0ee9514935aa3f1e73224f5edb
+
+## Vercel Deployment
+
+Deploy the Next.js frontend from this repo on Vercel.
+
+- Recommended project root directory: `apps/web`
+- If Vercel asks for an environment variable, set `NEXT_PUBLIC_API_URL` to your deployed backend URL
+- The backend code in `apps/api` is unchanged and stays separate from the Vercel frontend deployment
